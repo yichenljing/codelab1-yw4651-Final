@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {fileID: 21300000, guid: 7e9aa56d63c21496a8cc05ce24ed7a35, type: 3}
   used: {fileID: 21300000, guid: e36e41b8e877a401494e386e414db2e9, type: 3}
+  notActive: {fileID: 21300000, guid: e2609e3329b994baeb09d9c4e6d621ff, type: 3}
 --- !u!82 &-9105298349032605302
 AudioSource:
   m_ObjectHideFlags: 0

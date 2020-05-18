@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,16 +10,19 @@ public class GameManager : MonoBehaviour
     public int CurrentScore = 0;
     public int CurrentFood = 5;  // start with 5 food
     public int CurrentPower = 0;
+    public int power;
     public int Currentlocation =0;  
 
     public Text ScoreDisplay;
     public Text FoodDisplay;
     public Text PowerDisplay;
+
    // public Text LocationDisplay;
 
     public string title; // var for title
     public string description; // var for a desription
 
+    public Menu menu;
     private void Awake()
     {
         if (instance == null)
@@ -37,8 +41,8 @@ public class GameManager : MonoBehaviour
         ScoreDisplay.text = "Score: " + CurrentScore;
         FoodDisplay.text = "Food: " + CurrentFood;
         PowerDisplay.text = "Power: " + CurrentPower;
-       
 
+        
     }
   /*  public void ShowLocation()
 
@@ -51,7 +55,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        power = CurrentPower;
+    }
+
+    public int getPower() {
+
+        return power;
     }
 
     public void AddScore ()
@@ -66,12 +75,22 @@ public class GameManager : MonoBehaviour
     }
     public void ConsumeFood()
     {
-        CurrentFood--;
-        FoodDisplay.text = "Food: " + CurrentFood;    //show current food amount on screen
+        if (CurrentFood >= 1)
+        {
+
+            CurrentFood--;
+            FoodDisplay.text = "Food: " + CurrentFood;    //show current food amount on screen
+        }
+        else {
+            menu.changeScene("GameMenu");
+        }
+      
     }
     public void AddPower()
     {
         CurrentPower ++;
+     
+
         PowerDisplay.text = "Power: " + CurrentPower; //show current wood amount on screen
 
     }
@@ -101,5 +120,14 @@ public class GameManager : MonoBehaviour
         Currentlocation = 5;
 
     }
-    
+    public void MetElf()
+    {
+        Currentlocation = 6;
+
+    }
+    public void FindBerry()
+    {
+        Currentlocation = 7;
+
+    }
 }

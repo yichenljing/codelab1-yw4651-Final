@@ -11,7 +11,10 @@ public class AsciiLevelLoader : MonoBehaviour
     public GameObject mushroom;
     public GameObject badland;
     public GameObject Boss;
-   
+    public GameObject GrassElf;
+    public GameObject Berries;
+
+
     public float xOffset = 0f;
     public float yOffset = 0;
 
@@ -46,14 +49,14 @@ public class AsciiLevelLoader : MonoBehaviour
                 {
                     case 'G':
                         newObject = Instantiate<GameObject>(grass);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform); 
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
 
                     case 'F':
                         newObject = Instantiate<GameObject>(forest);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform); 
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
@@ -61,33 +64,47 @@ public class AsciiLevelLoader : MonoBehaviour
 
                     case 'O':
                         newObject = Instantiate<GameObject>(ocean);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform);
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
 
                     case 'M':
                         newObject = Instantiate<GameObject>(mushroom);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new terrrain
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
 
                     case 'B':
                         newObject = Instantiate<GameObject>(badland);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform); 
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
 
                     case 'I':
                         newObject = Instantiate<GameObject>(Boss);
-                        newObject.transform.SetParent(wallHolder.transform); //make the parent of th new wall, Wall Holder
+                        newObject.transform.SetParent(wallHolder.transform); 
                         newObject.transform.position =
                                 new Vector2(x + xOffset, -y + yOffset);
                         break;
-                 
-                    
+
+
+                    case 'E':
+                        newObject = Instantiate<GameObject>(GrassElf);
+                        newObject.transform.SetParent(wallHolder.transform);
+                        newObject.transform.position =
+                                new Vector2(x + xOffset, -y + yOffset);
+                        break;
+
+                    case 'D':
+                        newObject = Instantiate<GameObject>(Berries);
+                        newObject.transform.SetParent(wallHolder.transform);
+                        newObject.transform.position =
+                                new Vector2(x + xOffset, -y + yOffset);
+                        break;
+
                     default:
                         print("empty");
                         break;
