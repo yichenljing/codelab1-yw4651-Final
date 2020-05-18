@@ -1408,7 +1408,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
+    m_FontSize: 10
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -1419,17 +1419,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Choose a place to start.
-
+  m_Text: '
 
     Every movement will consume 1 food.
 
 
-    Get
-    Power from Forest or Badland
 
 
-    Damage = Attact + Power'
+    Damage = Random Attact
+    + Power'
 --- !u!222 &1759575578
 CanvasRenderer:
   m_ObjectHideFlags: 0

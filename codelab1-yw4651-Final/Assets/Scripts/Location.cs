@@ -38,7 +38,7 @@ public class Location : MonoBehaviour
             if (GameManager.instance.Currentlocation == 3)
             {
                 UIlocation.SetActive(true);
-                UIlocation.GetComponent<Text>().text = ("Consume 1 food \n You enter the Grass area.\n \n nothing happens");
+                UIlocation.GetComponent<Text>().text = ("Consume 1 food \n You enter the Grass area.\n \n Nothing happens");
             }
 
             if (GameManager.instance.Currentlocation == 4)
@@ -77,7 +77,7 @@ public class Location : MonoBehaviour
 
                 UIlocation.SetActive(true);
 
-                UIlocation.GetComponent<Text>().text = ("Consume 1 food \n\n s You enter the Grass area.\n\n  You find some berries over the grass!  \n \n Food+1");
+                UIlocation.GetComponent<Text>().text = ("Consume 1 food \n\n  You enter the Grass area.\n\n  You find some berries over the grass!  \n \n Food+1");
             }
         }
 
