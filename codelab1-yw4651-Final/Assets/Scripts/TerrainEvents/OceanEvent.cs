@@ -18,7 +18,8 @@ public class OceanEvent : MonoBehaviour
         }
     void OnMouseDown()
     {
-        Debug.Log("You sail on the ocean in a boat!");
+        Debug.Log("You cannot cross the sea!");
+      
     }
 }
 

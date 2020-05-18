@@ -9,10 +9,15 @@ public class GameManager : MonoBehaviour
     public int CurrentScore = 0;
     public int CurrentFood = 5;  // start with 5 food
     public int CurrentPower = 0;
+    public int Currentlocation =0;  
 
     public Text ScoreDisplay;
     public Text FoodDisplay;
     public Text PowerDisplay;
+   // public Text LocationDisplay;
+
+    public string title; // var for title
+    public string description; // var for a desription
 
     private void Awake()
     {
@@ -32,7 +37,16 @@ public class GameManager : MonoBehaviour
         ScoreDisplay.text = "Score: " + CurrentScore;
         FoodDisplay.text = "Food: " + CurrentFood;
         PowerDisplay.text = "Power: " + CurrentPower;
+       
+
     }
+  /*  public void ShowLocation()
+
+    {
+        LocationDisplay.text = "" + title + description;
+
+    }
+    */
 
     // Update is called once per frame
     void Update()
@@ -61,4 +75,31 @@ public class GameManager : MonoBehaviour
         PowerDisplay.text = "Power: " + CurrentPower; //show current wood amount on screen
 
     }
+
+    public void enterForest()
+    {
+        Currentlocation = 1;
+
+    }
+    public void enterBadland()
+    {
+        Currentlocation = 2;
+
+    }
+    public void enterGrass()
+    {
+        Currentlocation = 3;
+
+    }
+    public void enterMushroom()
+    {
+        Currentlocation = 4;
+
+    }
+    public void enterBoss()
+    {
+        Currentlocation = 5;
+
+    }
+    
 }

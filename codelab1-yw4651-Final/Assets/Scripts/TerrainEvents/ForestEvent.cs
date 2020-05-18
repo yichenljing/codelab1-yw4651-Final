@@ -21,6 +21,7 @@ public class ForestEvent : MonoBehaviour
 	void OnMouseDown() {
         if (GetComponent<SpriteRenderer>().sprite == origin)
         {
+            GetComponent<AudioSource>().Play();   // play sound when clicking
             GetComponent<SpriteRenderer>().sprite = used;
             Debug.Log("You enter the Forest!");
             GameManager.instance.ConsumeFood();  //every move consume 1 food（reduce one food when enter this area）
@@ -28,7 +29,7 @@ public class ForestEvent : MonoBehaviour
             GameManager.instance.AddPower();
             Debug.Log("You got 1 Power");
 
-
+            GameManager.instance.enterForest();
         }
         if (GetComponent<SpriteRenderer>().sprite == used)
         {

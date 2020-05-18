@@ -21,7 +21,9 @@ public class MushroomEvent : MonoBehaviour
     void OnMouseDown()
     {
       
-        if (GetComponent<SpriteRenderer>().sprite == origin) {
+        if (GetComponent<SpriteRenderer>().sprite == origin)
+        {
+            GetComponent<AudioSource>().Play();   // play sound when clicking
             GetComponent<SpriteRenderer>().sprite = used;
             //replace the sprite
             Debug.Log("You enter an area full of mushroom!");
@@ -29,7 +31,9 @@ public class MushroomEvent : MonoBehaviour
 
             GameManager.instance.AddFood();
             Debug.Log("Your Food: " + GameManager.instance.CurrentFood);
-            
+
+
+            GameManager.instance.enterMushroom();
         }
         else if (GetComponent<SpriteRenderer>().sprite == used)
         {

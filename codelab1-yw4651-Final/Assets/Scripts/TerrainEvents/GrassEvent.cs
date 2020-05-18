@@ -22,10 +22,12 @@ public class GrassEvent : MonoBehaviour
     {
         if (GetComponent<SpriteRenderer>().sprite == origin)
         {
+            GetComponent<AudioSource>().Play();   // play sound when clicking
             GetComponent<SpriteRenderer>().sprite = used;
             Debug.Log("You enter the grass area!");
             GameManager.instance.ConsumeFood();  //every move consume 1 food（reduce one food when enter this area）
 
+            GameManager.instance.enterGrass();
         }
 
     }
